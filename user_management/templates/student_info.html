@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include 'header.html' %}
+    <body>
+        <div class="container">
+            {% include 'menus.html' %}
+            <br>
+            <br>
+            <br>
+            <h3>Student Information</h3>
+            <br>
+            {% if student %}
+            <p><strong>Roll Number:</strong> {{ student['Roll No'] }}</p>
+            <p><strong>Name:</strong> {{ student['Name'] }}</p>
+            <p><strong>Email:</strong> {{ student['email'] }}</p>
+            <p><strong>Date of Birth:</strong> {{ student['DOB'] }}</p>
+            <p><strong>Address:</strong> {{ student['Address'] }}</p>
+            <p><strong>Maths Marks:</strong> {{ student['Maths Marks'] }}</p>
+            <p><strong>English Marks:</strong> {{ student['English Marks'] }}</p>
+            <p><strong>Science Marks:</strong> {{ student['Science Marks'] }}</p>
+            {% else %}
+            <p>No student information available.</p>
+            {% endif %}
+        </div>
+    </body>
+</html>
